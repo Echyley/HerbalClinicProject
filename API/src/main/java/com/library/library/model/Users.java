@@ -1,4 +1,6 @@
-package model;
+package com.library.library.model;
+
+import java.io.Serializable;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -7,11 +9,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-import java.io.Serializable;
-
 @Entity
 @Table (name = "users")
-public class Users implements Serializable {
+public class Users implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

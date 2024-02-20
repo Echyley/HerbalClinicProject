@@ -1,4 +1,4 @@
-package controllers;
+package com.library.library.controllers;
 
 import java.util.List;
 
@@ -15,34 +15,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import model.Users;
-import services.UsersService;
-
+import com.library.library.model.Users;
+import com.library.library.services.UsersService;
 
 @RestController
 @RequestMapping("/users")
 public class UsersController {
-
+    
     @Autowired
     private UsersService service;
 
     //FindAll
-    @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Users> findAll() {
         return service.findAll();
     }
-
+    
     //Create
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Users create(@RequestBody Users user) {
-        return service.create(user);
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public Users create(@RequestBody Users person) {
+        return service.create(person);
     }
 
     //Read
-    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Users findById(@PathVariable(value = "id") Long id) {
-        return service.findById(id);
-    }
+    @GetMapping(value = "/{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE)
+            public Users findById(@PathVariable(value = "id") Long id) {return service.findById(id);}
 
     //Update
     @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -62,5 +62,5 @@ public class UsersController {
         service.delete(id);
         return ResponseEntity.noContent().build();
     }
-
+    
 }
