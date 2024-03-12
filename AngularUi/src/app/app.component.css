@@ -1,0 +1,104 @@
+* {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  padding: 10px 20px;
+}
+
+header img {
+  max-width: 150px;
+}
+
+.nav-item {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  &:hover{
+
+  }
+}
+
+.nav-item a {
+  color: rgba(255, 255, 255, 0.821);
+}
+
+.login-signup-menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.login-signup-menu .navbar-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.login-signup-menu .nav-item {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-signup-menu .nav-item img {
+  cursor: auto;
+}
+
+.login-signup-menu .nav-item a {
+  color: rgba(255, 255, 255, 0.821);
+}
+
+.login-signup-menu img{
+  width: 50px;
+}
+
+.content {
+  background-image: linear-gradient(
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.534),
+      rgba(0, 0, 0, 0.986)
+    ),
+    url(../assets/img/Banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 277px);
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.content h1 {
+  color: rgba(245, 245, 245, 0.749);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.666);
+  background-color: rgb(28, 27, 27);
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100px;
+}
+
+footer a {
+  color: rgb(86, 134, 167);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-item {
+    padding: 0 10px;
+  }
+}

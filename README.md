@@ -14,3 +14,6 @@ Necessary classes:
 ## Herbs catalog session
 * Here the client can help the clinic to create and manage herbs info!
 Necessary classes:
+
+
+continue to edit angular UI
